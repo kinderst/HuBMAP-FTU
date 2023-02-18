@@ -36,16 +36,16 @@ The way this problem is scored is based on the [Sorenson-Dice Coefficient](https
 
 The results from this training showed that on the validation dataset, a dice coefficient of .788 was scored, thus showing very significant overlap in the predicted mask versus the ground truth. Further potential improvements to the model are listed at the bottom of the notebook script. The results from 6 randomly selected images from the validation set (i.e. that the model has never technically seen before) are shown below.
 
-![Results A](/img/results-a.PNG "Results A")
+![Results A](/img/all-a.PNG "Results A")
 
-![Results B](/img/results-a.PNG "Results B")
+![Results B](/img/all-b.PNG "Results B")
 
-![Results C](/img/results-a.PNG "Results C")
+![Results C](/img/all-c.PNG "Results C")
 
-![Results D](/img/results-a.PNG "Results D")
+![Results D](/img/all-d.PNG "Results D")
 
-![Results E](/img/results-a.PNG "Results E")
+![Results E](/img/all-e.PNG "Results E")
 
-![Results F](/img/results-a.PNG "Results F")
+![Results F](/img/all-f.PNG "Results F")
 
 Since this was a Kaggle competition, the implied test data was evaluated by the website since they do not want to release the test data, and unfortunately this model did not score as high on the leaderboard as I would have liked. This is because one major focus of this Kaggle competition was the ability to segment these FTUs as they come in from different imaging sources, while the training data was from just one source. Generally CNN models can have difficulties when dealing with different images sources, because the different sources can have variations in contrast, brightness, or other numerous sources of noise which can throw of the patterns that the CNN learned from training on a particular source. There has been a lot of research on how to mess with CNNs by applying noise in particular ways to the input image, and this is essentially the phenomenon when we get medical images from different sources. So unfortunately that was a difficulty, but otherwise I was very satisfied with the .788 dice score on the validation dataset, considering the winning score was 0.83562, so approximately just 0.05 better, but of course they are far, far more generalizable to different input images.
